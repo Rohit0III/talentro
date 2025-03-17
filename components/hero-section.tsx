@@ -9,78 +9,79 @@ export function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    if (!canvasRef.current) return
+    if (!canvasRef.current) return;
 
-    const canvas = canvasRef.current
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return; // Ensure ctx exists
 
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     // Generate points
-    const particlesArray: any[] = []
-    const numberOfParticles = Math.min(50, Math.floor(window.innerWidth / 20))
+    const particlesArray: { x: number; y: number; directionX: number; directionY: number; size: number; color: string }[] = [];
+    const numberOfParticles = Math.min(50, Math.floor(window.innerWidth / 20));
 
     for (let i = 0; i < numberOfParticles; i++) {
-      const size = Math.random() * 5 + 1
-      const x = Math.random() * canvas.width
-      const y = Math.random() * canvas.height
-      const directionX = Math.random() * 1 - 0.5
-      const directionY = Math.random() * 1 - 0.5
-      const color = i % 3 === 0 ? "#D4503A" : i % 3 === 1 ? "#787979" : "#FFE2DE"
+      const size = Math.random() * 5 + 1;
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const directionX = Math.random() * 1 - 0.5;
+      const directionY = Math.random() * 1 - 0.5;
+      const color = i % 3 === 0 ? "#D4503A" : i % 3 === 1 ? "#787979" : "#FFE2DE";
 
-      particlesArray.push({ x, y, directionX, directionY, size, color })
+      particlesArray.push({ x, y, directionX, directionY, size, color });
     }
 
     function animate() {
-      requestAnimationFrame(animate)
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      requestAnimationFrame(animate);
+      if (!ctx) return; // Ensure ctx is valid before using it
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particlesArray.forEach((particle) => {
-        particle.x += particle.directionX
-        particle.y += particle.directionY
+        particle.x += particle.directionX;
+        particle.y += particle.directionY;
 
         if (particle.x > canvas.width || particle.x < 0) {
-          particle.directionX *= -1
+          particle.directionX *= -1;
         }
         if (particle.y > canvas.height || particle.y < 0) {
-          particle.directionY *= -1
+          particle.directionY *= -1;
         }
 
-        ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-        ctx.fillStyle = particle.color
-        ctx.fill()
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
 
         // Draw connections
         particlesArray.forEach((otherParticle) => {
-          const dx = particle.x - otherParticle.x
-          const dy = particle.y - otherParticle.y
-          const distance = Math.sqrt(dx * dx + dy * dy)
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 100) {
-            ctx.beginPath()
-            ctx.strokeStyle = `rgba(120, 121, 121, ${0.2 - distance / 500})`
-            ctx.lineWidth = 1
-            ctx.moveTo(particle.x, particle.y)
-            ctx.lineTo(otherParticle.x, otherParticle.y)
-            ctx.stroke()
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(120, 121, 121, ${0.2 - distance / 500})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.stroke();
           }
-        })
-      })
+        });
+      });
     }
 
-    animate()
+    animate();
 
     const handleResize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center">

@@ -46,7 +46,7 @@ export function ContactSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Let's <span className="text-primary">Connect</span>
+                Let&apos;s <span className="text-primary">Connect</span>
               </h2>
               <p className="text-gray-medium dark:text-gray-light mb-8">
                 Ready to transform your business with cutting-edge technology solutions? Reach out to us today for a
@@ -125,7 +125,7 @@ export function ContactSection() {
 
               {submitted ? (
                 <div className="bg-green-100 dark:bg-green-900/20 border border-green-400 text-green-700 dark:text-green-400 px-4 py-3 rounded mb-6">
-                  <p>Thank you for your message! We'll get back to you soon.</p>
+                  <p>Thank you for your message! We&apos;ll get back to you soon.</p>
                 </div>
               ) : null}
 

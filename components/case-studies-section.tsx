@@ -95,7 +95,7 @@ export function CaseStudiesSection() {
             Our <span className="text-primary">Case Studies</span>
           </h2>
           <p className="text-gray-medium dark:text-gray-light mb-8">
-            Explore our successful projects and see how we've helped businesses transform and grow.
+            Explore our successful projects and see how we&apos;ve helped businesses transform and grow.
           </p>
 
           <div className="flex flex-wrap justify-center gap-2 mb-8">

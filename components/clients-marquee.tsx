@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // "use client"
 
 // import Image from "next/image"
@@ -156,7 +157,7 @@ export function ClientsMarquee() {
             Trusted by <span className="text-primary">Industry Leaders</span>
           </h2>
           <p className="text-gray-medium dark:text-gray-light">
-            We've partnered with forward-thinking companies across various industries to deliver exceptional results.
+            We&apos;ve partnered with forward-thinking companies across various industries to deliver exceptional results.
           </p>
         </div>
       </div>
