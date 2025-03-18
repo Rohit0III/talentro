@@ -31,30 +31,30 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 dark:bg-accent/90 shadow-md backdrop-blur-sm py-3" : "bg-transparent py-3"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 dark:bg-accent/90 shadow-md backdrop-blur-sm py-3" : "bg-transparent py-3"
+        }`}
     >
       <div className="container flex items-center justify-between">
-       <div className="flex space-x-3 ">
-      <div className=" size-16 max-sm:size-12 mt-4">
-          <img src="/logo-talentronaut.png" alt=""/> 
+        <div className="flex space-x-3 ">
+          <div className="size-12 flex max-sm:size-12 mt-4 mb-3">
+            <img src="/logo-talentronaut.png" alt="" />
+            <Link
+              href="#home"
+              className="text-4xl font-bold mt-3 transition-all max-sm:hidden hover:opacity-80 bg-gradient-to-r from-orange-500 to-gray-medium bg-clip-text text-transparent"
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }}
+            >
+              alentronaut
+            </Link>
           </div>
-        <Link
-          href="#home"
-          className="text-2xl font-bold text-primary dark:text-primary transition-all sm:hidden max-sm:hidden hover:opacity-80"
-          onClick={(e) => {
-            e.preventDefault()
-            window.scrollTo({ top: 0, behavior: "smooth" })
-          }}
-        >
-          Talentronaut
-        </Link>
-        </div> 
+
+        </div>
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <ul className="flex items-center text-lg font-minion space-x-6">
+          <ul className="flex items-center text-xl font-minion mt-4 space-x-6">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
