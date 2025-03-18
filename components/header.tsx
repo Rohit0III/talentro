@@ -40,7 +40,7 @@ export function Header() {
             <img src="/logo-talentronaut.png" alt="" />
             <Link
               href="#home"
-              className="text-4xl font-bold mt-3 transition-all max-sm:hidden hover:opacity-80 bg-gradient-to-r from-orange-500 to-gray-medium bg-clip-text text-transparent"
+              className="text-4xl font-bold mt-3 font-teknaf transition-all max-sm:hidden hover:opacity-80 bg-gradient-to-r from-orange-500 to-gray-medium bg-clip-text text-transparent tracking-wider"
               onClick={(e) => {
                 e.preventDefault()
                 window.scrollTo({ top: 0, behavior: "smooth" })

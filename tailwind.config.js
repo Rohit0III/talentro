@@ -105,6 +105,7 @@ const config = {
       fontFamily: {
         bochan: ["Bochan", "sans-serif"],
         minion: ["Minion", "serif"],
+        teknaf:["teknaf","sans-serif"]
       },
     },
   },
