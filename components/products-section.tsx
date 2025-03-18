@@ -53,10 +53,10 @@ export function ProductsSection() {
     <section id="products" className="py-24">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-minion mb-4">
             Our <span className="text-primary">Products</span>
           </h2>
-          <p className="text-gray-medium dark:text-gray-light">
+          <p className="text-gray-medium font-bochan dark:text-gray-light">
             Cutting-edge SaaS solutions powered by artificial intelligence to transform your workflow.
           </p>
         </div>
@@ -76,9 +76,9 @@ export function ProductsSection() {
                       }`}
                       onClick={() => setActiveIndex(index)}
                     >
-                      <h3 className="font-bold text-lg mb-1">{product.title}</h3>
+                      <h3 className="font-bold font-minion text-xl mb-1">{product.title}</h3>
                       <p
-                        className={`text-sm truncate ${
+                        className={`text-sm truncate font-bochan ${
                           activeIndex === index ? "text-white/80" : "text-gray-medium dark:text-gray-light"
                         }`}
                       >
@@ -119,11 +119,11 @@ export function ProductsSection() {
                   ))}
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4">{products[activeIndex].title}</h3>
+                <h3 className="text-2xl font-minion font-bold mb-4">{products[activeIndex].title}</h3>
                 <p className="text-gray-medium dark:text-gray-light mb-6">{products[activeIndex].description}</p>
 
-                <div className="flex flex-wrap gap-4">
-                  <Button className="bg-primary hover:bg-primary/90 text-white">Try Demo</Button>
+                <div className="flex flex-wrap font-bochan gap-4">
+                  <Button className="bg-primary  hover:bg-primary/90 text-white">Try Demo</Button>
                   <Button
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary/10 dark:border-secondary dark:text-secondary dark:hover:bg-secondary/10"

@@ -90,18 +90,18 @@ export function HeroSection() {
       <div className="container relative z-10 pt-28 pb-16 md:pt-36 md:pb-24">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block px-4 py-1 mb-6 border border-primary/30 rounded-full bg-secondary/30 dark:bg-primary/10 animate-fade-in">
-            <p className="text-sm font-medium text-primary">Next-Gen Technology Solutions</p>
+            <p className="text-sm font-medium text-primary font-minion">Next-Gen Technology Solutions</p>
           </div>
 
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-up"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-minion animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
             <span className="text-primary">Innovating</span> the Future with AI & Next-Gen Technology
           </h1>
 
           <p
-            className="text-lg md:text-xl text-gray-medium dark:text-gray-light mb-10 animate-fade-up"
+            className="text-lg md:text-xl text-gray-medium dark:text-gray-light mb-10 animate-fade-up font-bochan"
             style={{ animationDelay: "0.4s" }}
           >
             End-to-end solutions in AI, Web3, SaaS, and Automation for forward-thinking enterprises.
@@ -111,10 +111,10 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
-            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-6">Get a Free Consultation</Button>
+            <Button className="bg-primary hover:bg-primary/90 font-bochan text-white px-6 py-6">Get a Free Consultation</Button>
             <Button
               variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 dark:border-secondary dark:text-secondary dark:hover:bg-secondary/10 px-6 py-6"
+              className="border-primary font-bochan text-primary hover:bg-primary/10 dark:border-secondary dark:text-secondary dark:hover:bg-secondary/10 px-6 py-6"
             >
               Explore Our Solutions <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

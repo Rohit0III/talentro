@@ -32,17 +32,17 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 dark:bg-accent/90 shadow-md backdrop-blur-sm py-3" : "bg-transparent py-5"
+        isScrolled ? "bg-white/90 dark:bg-accent/90 shadow-md backdrop-blur-sm py-3" : "bg-transparent py-3"
       }`}
     >
       <div className="container flex items-center justify-between">
-       <div className="flex space-x-5 ">
-      <div className=" size-16">
+       <div className="flex space-x-3 ">
+      <div className=" size-16 max-sm:size-12 mt-4">
           <img src="/logo-talentronaut.png" alt=""/> 
           </div>
         <Link
           href="#home"
-          className="text-2xl font-bold text-primary dark:text-primary transition-all hover:opacity-80"
+          className="text-2xl font-bold text-primary dark:text-primary transition-all sm:hidden max-sm:hidden hover:opacity-80"
           onClick={(e) => {
             e.preventDefault()
             window.scrollTo({ top: 0, behavior: "smooth" })
@@ -54,7 +54,7 @@ export function Header() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <ul className="flex items-center space-x-6">
+          <ul className="flex items-center text-lg font-minion space-x-6">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
@@ -79,7 +79,7 @@ export function Header() {
         </nav>
 
         {/* Mobile navigation toggle */}
-        <div className="flex items-center md:hidden space-x-4">
+        <div className="flex items-center md:hidden space-x-2">
           <ThemeToggle />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

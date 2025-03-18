@@ -91,14 +91,14 @@ export function CaseStudiesSection() {
     <section id="case-studies" className="py-24 bg-secondary/20 dark:bg-accent/20">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl font-minion md:text-4xl font-bold mb-4">
             Our <span className="text-primary">Case Studies</span>
           </h2>
-          <p className="text-gray-medium dark:text-gray-light mb-8">
+          <p className="text-gray-medium dark:text-gray-light font-bochan mb-8">
             Explore our successful projects and see how we&apos;ve helped businesses transform and grow.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap font-bochan justify-center gap-2 mb-8">
             {categories.map((category) => (
               <button
                 key={category}
@@ -140,20 +140,20 @@ export function CaseStudiesSection() {
                   <Badge className="mb-2 bg-secondary text-primary dark:bg-primary/20 dark:text-secondary">
                     {study.category}
                   </Badge>
-                  <h3 className="text-xl font-bold mb-2">{study.title}</h3>
-                  <p className="text-sm text-gray-medium dark:text-gray-light mb-2">Client: {study.client}</p>
-                  <p className="text-gray-medium dark:text-gray-light mb-4">{study.description}</p>
+                  <h3 className="text-xl font-minion font-bold mb-2">{study.title}</h3>
+                  <p className="text-sm text-gray-medium font-minion dark:text-gray-light mb-2">Client: {study.client}</p>
+                  <p className="text-gray-medium font-minion dark:text-gray-light mb-4">{study.description}</p>
 
                   <div className="mb-4">
-                    <h4 className="font-semibold mb-2">Results:</h4>
-                    <ul className="list-disc pl-5 text-sm text-gray-medium dark:text-gray-light">
+                    <h4 className="font-semibold font-minion mb-2">Results:</h4>
+                    <ul className="list-disc pl-5 text-sm text-gray-medium font-bochan dark:text-gray-light">
                       {study.results.map((result, index) => (
                         <li key={index}>{result}</li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap  font-bochan gap-2 mb-4">
                     {study.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -164,7 +164,7 @@ export function CaseStudiesSection() {
                     ))}
                   </div>
 
-                  <Button variant="link" className="p-0 h-auto text-primary dark:text-primary hover:opacity-80">
+                  <Button variant="link" className="p-0 h-auto text-primary font-bochan dark:text-primary hover:opacity-80">
                     View Full Case Study
                   </Button>
                 </div>

@@ -102,6 +102,10 @@ const config = {
         "marquee": "marquee 40s linear infinite",
         "marquee-reverse": "marquee-reverse 40s linear infinite",
       },
+      fontFamily: {
+        bochan: ["Bochan", "sans-serif"],
+        minion: ["Minion", "serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

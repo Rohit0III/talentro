@@ -45,10 +45,10 @@ export function ContactSection() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl font-minion md:text-4xl font-bold mb-6">
                 Let&apos;s <span className="text-primary">Connect</span>
               </h2>
-              <p className="text-gray-medium dark:text-gray-light mb-8">
+              <p className="text-gray-medium font-bochan dark:text-gray-light mb-8">
                 Ready to transform your business with cutting-edge technology solutions? Reach out to us today for a
                 consultation.
               </p>
@@ -59,8 +59,8 @@ export function ContactSection() {
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Email Us</h3>
-                    <p className="text-gray-medium dark:text-gray-light">info@talentronaut.com</p>
+                    <h3 className="font-bold font-minion mb-1">Email Us</h3>
+                    <p className="text-gray-medium font-bochan dark:text-gray-light">info@talentronaut.com</p>
                   </div>
                 </div>
 
@@ -69,8 +69,8 @@ export function ContactSection() {
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Call Us</h3>
-                    <p className="text-gray-medium dark:text-gray-light">+1 (555) 123-4567</p>
+                    <h3 className="font-bold font-minion mb-1">Call Us</h3>
+                    <p className="text-gray-medium font-bochan dark:text-gray-light">+1 (555) 123-4567</p>
                   </div>
                 </div>
 
@@ -79,8 +79,8 @@ export function ContactSection() {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Visit Us</h3>
-                    <p className="text-gray-medium dark:text-gray-light">
+                    <h3 className="font-bold font-minion mb-1">Visit Us</h3>
+                    <p className="text-gray-medium font-bochan dark:text-gray-light">
                       123 Innovation Drive
                       <br />
                       Tech Valley, CA 94103
@@ -89,7 +89,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="pt-4">
-                  <h3 className="font-bold mb-3">Connect With Us</h3>
+                  <h3 className="font-bold font-minion mb-3">Connect With Us</h3>
                   <div className="flex space-x-4">
                     <a
                       href="#"
@@ -121,10 +121,10 @@ export function ContactSection() {
             </div>
 
             <div className="bg-white dark:bg-accent rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
+              <h3 className="text-2xl font-bold font-minion mb-6">Send Us a Message</h3>
 
               {submitted ? (
-                <div className="bg-green-100 dark:bg-green-900/20 border border-green-400 text-green-700 dark:text-green-400 px-4 py-3 rounded mb-6">
+                <div className="bg-green-100 font-bochan dark:bg-green-900/20 border border-green-400 text-green-700 dark:text-green-400 px-4 py-3 rounded mb-6">
                   <p>Thank you for your message! We&apos;ll get back to you soon.</p>
                 </div>
               ) : null}
@@ -132,14 +132,14 @@ export function ContactSection() {
               <form onSubmit={handleSubmit}>
                 <div className="space-y-5">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">
+                    <label htmlFor="name" className="block font-minion text-sm font-medium mb-1">
                       Full Name
                     </label>
                     <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">
+                    <label htmlFor="email" className="block font-minion text-sm font-medium mb-1">
                       Email Address
                     </label>
                     <Input
@@ -153,14 +153,14 @@ export function ContactSection() {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                    <label htmlFor="subject" className="block font-minion text-sm font-medium mb-1">
                       Subject
                     </label>
                     <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} required />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-1">
+                    <label htmlFor="message" className="block font-minion text-sm font-medium mb-1">
                       Message
                     </label>
                     <Textarea
@@ -179,7 +179,7 @@ export function ContactSection() {
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                      <span className="flex items-center">
+                      <span className="flex font-bochan items-center">
                         <svg
                           className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +203,7 @@ export function ContactSection() {
                         Processing...
                       </span>
                     ) : (
-                      <span className="flex items-center">
+                      <span className="flex  font-bochan items-center">
                         Send Message <Send className="ml-2 h-4 w-4" />
                       </span>
                     )}

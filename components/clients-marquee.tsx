@@ -111,16 +111,16 @@ import { useEffect, useState } from "react"
 
 // Sample client logos (using placeholder images)
 const clients = [
-  { name: "Microsoft", logo: "/logo-adobe.png" },
-  { name: "Google", logo: "/logo-amazon.png" },
-  { name: "Amazon", logo: "/logo-apple.png" },
-  { name: "IBM", logo: "/logo-google.png" },
-  { name: "Oracle", logo: "/logo-IBM.png" },
-  { name: "Tesla", logo: "/logo-meta.jpeg" },
-  { name: "Apple", logo: "/logo-microsoft.png" },
-  { name: "Meta", logo: "/logo-oracle.png" },
-  { name: "Salesforce", logo: "/logo-salesforce.jpeg" },
-  { name: "Adobe", logo: "/logo-Tesla.png" },
+  { name: "Microsoft", logo: "/1.svg" },
+  { name: "Google", logo: "/2.svg" },
+  { name: "Amazon", logo: "/4.svg" },
+  { name: "IBM", logo: "/5.svg" },
+  { name: "Oracle", logo: "/6.svg" },
+  { name: "Tesla", logo: "/7.svg" },
+  { name: "Apple", logo: "/8.svg" },
+  { name: "Meta", logo: "/9.svg" },
+  { name: "Salesforce", logo: "/10.svg" },
+  { name: "Adobe", logo: "/11.svg" },
 ]
 
 export function ClientsMarquee() {
@@ -153,10 +153,10 @@ export function ClientsMarquee() {
     <section className="py-16 bg-white dark:bg-accent overflow-hidden">
       <div className="container mb-8">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-minion mb-4">
             Trusted by <span className="text-primary">Industry Leaders</span>
           </h2>
-          <p className="text-gray-medium dark:text-gray-light">
+          <p className="text-gray-medium font-bochan dark:text-gray-light">
             We&apos;ve partnered with forward-thinking companies across various industries to deliver exceptional results.
           </p>
         </div>
@@ -174,7 +174,7 @@ export function ClientsMarquee() {
           {clients.map((client, index) => (
             <div key={`${client.name}-1-${index}`} className="mx-8 flex items-center justify-center">
               {/* Fixed dimensions container for consistent logo sizing */}
-              <div className="relative h-16 w-40 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+              <div className="relative h-32 w-40 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
                 <Image
                   src={client.logo || "/placeholder.svg"}
                   alt={`${client.name} logo`}

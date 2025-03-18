@@ -53,10 +53,10 @@ export function ServicesSection() {
     <section id="services" className="py-24 bg-secondary/20 dark:bg-accent/20">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-minion mb-4">
             Our <span className="text-primary">Services</span>
           </h2>
-          <p className="text-gray-medium dark:text-gray-light">
+          <p className="text-gray-medium font-bochan dark:text-gray-light">
             Comprehensive technology solutions tailored to drive innovation and growth for your business.
           </p>
         </div>
@@ -79,12 +79,12 @@ export function ServicesSection() {
                 {service.icon}
               </div>
 
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-medium dark:text-gray-light mb-6">{service.description}</p>
+              <h3 className="text-xl font-minion font-bold mb-3">{service.title}</h3>
+              <p className="text-gray-medium font-bochan dark:text-gray-light mb-6">{service.description}</p>
 
               <Button
                 variant="link"
-                className="p-0 h-auto text-primary dark:text-primary hover:text-primary/80 dark:hover:text-primary/80 font-medium"
+                className="p-0 h-auto text-primary dark:text-primary font-bochan hover:text-primary/80 dark:hover:text-primary/80 font-medium"
               >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
